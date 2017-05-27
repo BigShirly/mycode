@@ -1,1 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" metadata-complete="true">
+	<!-- 上下文参数：声明应用范围内的初始化参数 -->
+	<!-- <context-param>
+		<param-name>propertiesConfigLocation</param-name>
+		<param-value>/props/pay-admin.properties</param-value>
+	</context-param> -->
+	<context-param>
+		<param-name>sendSeconds</param-name>
+		<param-value>30</param-value>
+	</context-param>
+	<!-- 服务名称：后台管理 -->
+	<context-param>
+		<param-name>serverName</param-name>
+		<param-value>back-stage management</param-value>
+	</context-param>
+	<!-- 监听器 -->
+	<!-- <listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>cn.com.gome.frame.listener.PropertiesConfigListener</listener-class>
+	</listener> -->
+	<!-- <servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet> -->
+	<!-- <servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.dhtml</url-pattern>
+		<url-pattern>*.json</url-pattern>
+	</servlet-mapping> -->
+	<!-- 过滤器 -->
+	<!-- <filter>
+		<filter-name>HiddenHttpMethodFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>HiddenHttpMethodFilter</filter-name>
+		<servlet-name>springmvc</servlet-name>
+	</filter-mapping> -->
+	<!-- <filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter> -->
+	<!-- <filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>sqlAttackFilter</filter-name>
+		<filter-class>cn.com.gome.pay.admin.utils.SqlAttackFilter</filter-class>
+		<init-param>
+			<param-name>sendRedirect</param-name>
+			<param-value>errorpage/500.html</param-value>
+		</init-param>
+		<init-param>
+			<param-name>rules</param-name>
+			<param-value>[^$]{1,}</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>sqlAttackFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+
+	<!-- <filter>
+		<filter-name>sessionFilter</filter-name>
+		<filter-class>cn.com.gome.pay.admin.filter.SessionFilter</filter-class>
+		<init-param>
+			<param-name>excepUrlRegex</param-name>
+			<param-value>/login/</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+ 	<!-- 会话超时时间：以分为单位 -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<!-- hello页面 -->
+	<welcome-file-list>
+		<welcome-file>/welcome.html</welcome-file>
+	</welcome-file-list>
+	<!-- 错误页面 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errorpage/404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/errorpage/500.html</location>
+	</error-page>
+</web-app>
