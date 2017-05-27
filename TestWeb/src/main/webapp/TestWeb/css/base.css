@@ -1,0 +1,145 @@
+html, body, div,p{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border: 0 none;
+}
+/* clear float */
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix{
+    *zoom:1;
+}
+
+html, body{
+    height: 100%;
+    background: #FFF;
+    font: 12px/1.5 Arial,simsun;
+}
+/*表单元素*/
+.nText{
+    height: 18px;
+    padding:3px 0;
+    margin: 0 3px 0 0;
+    border: 1px solid #CCC;
+    color: #A5A5A5;
+    vertical-align: middle;
+}
+.nText:focus{
+    border-color: #A5A5A5;
+    color: #5E5E5E;
+}
+.nTextFocus{
+    border-color: #A5A5A5;
+    color: #5E5E5E;
+}
+.nText-err{
+    border-color:#C00;
+}
+.nLowLeight{
+	color:#A5A5A5;
+}
+/*登陆框*/
+.loginBox{
+    position: relative;
+    top: 50%;
+    width: 500px;
+    height: 449px;
+    margin: -225px auto 0;
+    background: url(../images/logbg.png) no-repeat;
+    box-shadow:0 0 40px rgba(0, 0, 0, .19);
+    border:1px solid #f1f1f1\9;
+}
+.loginHd{
+    height: 65px;
+    font: normal 22px/76px "Microsoft YaHei";
+    color: #FFF;
+    overflow: hidden;
+}
+.loginHd .logo{
+    float: left;
+    width: 191px;
+    height: 30px;
+    margin: 24px 30px 0 45px;
+    background: url(../images/logo.png) no-repeat;
+}
+.loginBd{
+    padding-top: 30px;
+}
+.loginBd .login-item{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    margin:0 auto;
+    padding:0 0 25px 0;
+    overflow: hidden;
+}
+.login-item .tips{
+    position: absolute;
+    left:0;
+    top: 38px;
+    color: #c00;
+}
+.login-item .nText{
+    width: 288px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.login-item .btnnuw{
+    display:block;
+    width:300px;
+    height:40px;
+    background:#C30000;
+    font:700 16px/40px "微软雅黑";
+    color:#EEE;
+    text-align:center;
+    border:0 none;
+    outline:none;
+    cursor: pointer;
+}
+.btnnuw:hover{
+    color:#EEE;
+    text-decoration:none;
+    background:#D00;
+}
+.actions button{
+    letter-spacing:10px;
+}
+
+.loginFt{
+    padding:20px 70px 0 100px;
+}
+.tipsBox{
+    position: absolute;
+    top:35px;
+    background: #FFF;
+    border: 1px solid #E1E1E1;
+    border-top: 0 none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .19);
+    z-index: 10;
+    color: #A5A5A5;
+    display: none;
+}
+.code_check{
+    display: inline-block;
+    width:128px;
+    padding-left: 10px;
+    height:36px;
+    text-align: center;
+    line-height:36px;
+    background: #ccc;
+    font-size: 20px;
+    position: relative;
+    top:5px;
+    left:18px;
+    cursor: pointer;
+    letter-spacing:16px;
+}

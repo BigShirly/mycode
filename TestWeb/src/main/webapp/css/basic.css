@@ -1,0 +1,83 @@
+.textarea{
+	overflow-x:hidden;
+	overflow-y:hidden;
+	border: 1px solid #95B8E7;
+}
+.spans {
+	background-color:#fc0;
+	display:-moz-inline-box;
+	display:inline-block;
+	width:150px; 
+}
+
+.tables{
+	border: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width:100%; 
+}
+.tr1{
+	background-color: #fff;
+}
+.tr2{
+	background-color: #eee;
+}
+
+.tr1 td{
+	border-right: 1px dashed #777;
+	border-bottom: 1px dashed #777;
+	height: 25px;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+.tr2 td{
+	border-right: 1px dashed #777;
+	border-bottom: 1px dashed #777;
+	height: 25px;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+.td_button{
+	height: 35px;
+	padding-left: 3px;
+}
+A:link {
+ color: #000000;
+ TEXT-DECORATION: none;
+}
+A:visited {
+ COLOR: #000000;
+ TEXT-DECORATION: none
+}
+A:hover {
+ COLOR: #ff7f24;
+ text-decoration: none;
+}
+A:active {
+ COLOR: #ff7f24;  
+ text-decoration: none;
+}
+.span_error{
+	position:absolute;
+	bottom:0px;
+	display: none;
+	left:138px;
+	height: 18px;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	border: 1px solid #ffa8a8;
+	line-height: 18px;
+	text-align: center;
+	padding: 0px 5px;
+	font-size: 12px;
+}
+
+.div_main {
+    float: left;
+}
+
+.div_main .div_main_1 {
+    width: 200px;
+    height: 30px;
+    background-color: #ffffff;
+    float: left;
+}
